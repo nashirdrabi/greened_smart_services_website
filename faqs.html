@@ -23,6 +23,27 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        .faq-card {
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .faq-card:hover {
+            transform: scale(1.02);
+        }
+
+        .faq-answer {
+            display: none;
+            margin-top: 10px;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-card.expanded .faq-answer {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
@@ -88,9 +109,9 @@
                             <div class="navbar-nav py-0">
                                 <a href="index.html" class="nav-item nav-link">Home</a>
                                 <a href="about.html" class="nav-item nav-link">About</a>
-                                <a href="#" class="nav-item nav-link">Services</a>
-                                <a href="gallery.html" class="nav-item nav-link active">Gallery</a>
-                                <a href="#" class="nav-item nav-link">FAQS</a>
+                                <a href="services.html" class="nav-item nav-link">Services</a>
+                                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                                <a href="#" class="nav-item nav-link active">FAQS</a>
                                 <a href="contact.html" class="nav-item nav-link">Contact</a>
                             </div>
 
@@ -106,84 +127,58 @@
         <div class="container-fluid page-header" style="margin-bottom: 90px;">
             <div class="container">
                 <div class="d-flex flex-column justify-content-center" style="min-height: 300px">
-                    <h3 class="display-4 text-white text-uppercase">Gallery</h3>
+                    <h3 class="display-4 text-white text-uppercase">FAQS</h3>
                     <div class="d-inline-flex text-white">
                         <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
                         <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                        <p class="m-0 text-uppercase">Gallery</p>
+                        <p class="m-0 text-uppercase">FAQS</p>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Header End -->
 
+        <div class="container my-5">
+            <h2 class="text-center mb-4">Frequently Asked Questions</h2>
 
-        <div class="hero-wrap hero-bread" style="background-image: url('images/dry_fruits1.jpg')">
-            <div class="container">
-                <div class="row no-gutters slider-text align-items-center justify-content-center">
-                    <div class="col-md-9 ftco-animate text-center">
-                        <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span>
-                            <span>Gallery</span>
-                        </p>
-                        <h1 class="mb-0 bread">Gallery</h1>
+            <div class="faq-section">
+                <div class="card faq-card" onclick="toggleAnswer(this)">
+                    <div class="card-header">
+                        <h5 class="mb-0">What is your return policy?</h5>
+                    </div>
+                    <div class="card-body faq-answer">
+                        <p>We offer a 30-day return policy with a full refund on all items. The item must be returned in
+                            its original packaging and condition.</p>
+                    </div>
+                </div>
+
+                <div class="card faq-card" onclick="toggleAnswer(this)">
+                    <div class="card-header">
+                        <h5 class="mb-0">How long does shipping take?</h5>
+                    </div>
+                    <div class="card-body faq-answer">
+                        <p>Shipping typically takes 5-7 business days. However, international orders may take up to 14
+                            days depending on customs processing times.</p>
+                    </div>
+                </div>
+
+                <div class="card faq-card" onclick="toggleAnswer(this)">
+                    <div class="card-header">
+                        <h5 class="mb-0">Can I track my order?</h5>
+                    </div>
+                    <div class="card-body faq-answer">
+                        <p>Yes, once your order is shipped, you will receive an email with a tracking number to track
+                            your package online.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div style="height: 60px;"></div>
-        <section class="container ftco-section">
-            <div class="row">
-                <div class="col-md-6 col-lg-4 ftco-animate">
-                    <a href="#" class="img-prod"><img class="img-fluid" src="img/field.jpg" alt="smart services" ,>
-                        <div class="overlay"></div>
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-4 ftco-animate">
-                    <a href="#" class="img-prod"><img class="img-fluid" src="img/field2.jpeg"
-                            alt="Dry&Delicious website" ,>
-                        <div class="overlay"></div>
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-4 ftco-animate p-12">
-                    <a href="#" class="img-prod"><img class="img-fluid" src="img/field3.jpeg"
-                            alt="Dry&Delicious website" ,>
-                        <div class="overlay"></div>
-                    </a>
-                </div>
-            </div>
-            <div style="height: 60px;"></div>
-            <div class="row">
-                <div class="col-md-6 col-lg-4 ftco-animate">
-                    <a href="#" class="img-prod"><img class="img-fluid" src="img/field4.jpeg"
-                            alt="Dry&Delicious website" ,>
-                        <div class="overlay"></div>
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-4 ftco-animate m-12">
-                    <a href="#" class="img-prod"><img class="img-fluid" src="img/field5.jpeg"
-                            alt="Dry&Delicious website" ,>
-                        <div class="overlay"></div>
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-4 ftco-animate p-12">
-                    <a href="#" class="img-prod"><img class="img-fluid p-12" src="img/field2.jpeg"
-                            alt="Dry&Delicious website" ,>
-                        <div class="overlay"></div>
-                    </a>
-                </div>
-            </div>
 
 
 
 
-        </section>
 
 
-        <div class="floating-icon">
-            <a href="https://api.whatsapp.com/send?phone=919797999431">
-                <img src="/img/whatsapp.png" alt="Floating Icon">
-            </a>
-        </div>
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
@@ -265,13 +260,22 @@
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
 
+        <!-- Footer End -->
+        <div class="floating-icon">
+            <a href="https://api.whatsapp.com/send?phone=919797999431">
+                <img src="/img/whatsapp.png" alt="Floating Icon">
+            </a>
+        </div>
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
-
+        <script>
+            function toggleAnswer(card) {
+                card.classList.toggle('expanded');
+            }
+        </script>
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
