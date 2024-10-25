@@ -27,6 +27,85 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Hero section container */
+        .hero-section {
+            position: relative;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        /* Dark overlay for readability */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.2);
+            /* Adjustable for brightness */
+            z-index: 1;
+        }
+
+        /* Content area */
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Highlighted text color */
+        .highlight {
+            color: #fd7e14;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        /* Button styles */
+        .btn-custom {
+            background-color: #fd7e14;
+            color: #fff;
+            font-weight: normal;
+            border: none;
+        }
+
+        .btn-custom:hover {
+            color: black;
+            transition: 0.3s;
+            font-weight: bold;
+            background-color: #e36b12;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            /* Allows the height to be adjusted automatically on desktop */
+            object-fit: cover;
+            /* Ensures the image covers the entire area */
+        }
+
+        /* Responsive padding */
+        @media (min-width: 768px) {
+            .hero-section {
+                padding: 80px;
+            }
+
+
+
+        }
+
+        @media (min-width: 992px) {
+            .hero-section {
+                padding: 100px;
+            }
+        }
+
+        @media(max-width: 576px) {
+            .carousel-item img {
+                height: 90vh;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -116,106 +195,111 @@
                 </ol> -->
                 <div class="carousel-inner">
                     <div class="carousel-item active" style="min-height: 300px;">
-                        <img class="position-relative w-100" src="img/field5.jpeg"
-                            style="min-height: 300px; object-fit: cover;max-height: 600px;">
-                        <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <img class="position-relative w-100" src="img/field5.jpeg">
+                        <div class=" carousel-caption d-flex align-items-center justify-content-center">
                             <div class="p-5" style="width: 100%; max-width: 900px;">
-                                <h3 class="text-white text-uppercase mb-md-3">Smart Services Pvt Ltd</h3>
-                                <h5 class="text-white mb-md-4">We welcome you to one of the jammu and kashmirs
-                                    most innovative sports infrastructure company.
+                                <div class="container-fluid hero-section">
+                                    <div class="hero-overlay"></div> <!-- Overlay for improved text visibility -->
 
-                                </h5>
-                                <a href="about.html"
-                                    class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn
-                                    More</a>
+                                    <div class="row justify-content-center hero-content">
+                                        <div class="col-12 col-md-10 col-lg-8 p-4">
+                                            <h1 class="display-4 text-white">Unlock Your Land's Potential!</h1>
+                                            <p class="lead mt-3">Earn up to <span class="highlight">₹1.5 - 2 Lakh per
+                                                    month</span> with Greened Smart Services!</p>
+                                            <p class="mt-4">Got land? Let us transform it into a <strong>profitable
+                                                    asset</strong> with high-demand sports and recreation setups.</p>
+                                            <a href="contact.html" class="btn btn-custom mt-4">Get Started Today</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            <!-- <a href="about.html"
+                                class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn
+                                More</a> -->
                         </div>
                     </div>
-
                 </div>
+
             </div>
         </div>
-        <!-- Carousel End -->
+    </div>
+    <!-- Carousel End -->
 
 
-        <!-- About Start -->
-        <div class="container-fluid py-5">
-            <div class="container py-5">
-                <div class="row align-items-center">
-                    <div class="col-lg-5">
-                        <img class="img-fluid rounded mb-4 mb-lg-0" src="img/logo.png" alt="">
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="text-left mb-4">
-                            <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">About Us</h5>
-                            <h1>Smart service private limited is an integrated sport infra structure company.</h1>
-                        </div>
-                        <p>Smart services was formed before two decades in reponce to various demands by clients and
-                            public for the need to have well developed sports facility in Jammu and Kashmir. In order to
-                            meet the demands of these individuals we have spent past few years researching on various
-                            world class approaches and methods that can best suit their needs.
-                        </p>
-                        <a href="about.html" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn
-                            More</a>
-                    </div>
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <img class="img-fluid rounded mb-4 mb-lg-0" src="img/logo.png" alt="">
                 </div>
-            </div>
-        </div>
-        <!-- About End -->
-
-
-
-
-
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
-            <div class="row pt-5">
-                <div class="col-lg-7 col-md-12">
-                    <div class="row">
-                        <div class="col-md-6 mb-5">
-                            <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Get In Touch</h5>
-                            <p><i class="fa fa-map-marker-alt mr-2"></i>Khaliq complex solina bazaar near petrol
-                                pump,Srinagar-190008, J&K</p>
-                            <p><i class="fa fa-phone-alt mr-2"></i>+91 9797999431</p>
-                            <p><i class="fa fa-envelope mr-2"></i>smartservices.jk@gmail.com</p>
-                            <div class="d-flex justify-content-start mt-4">
-                                <a class="btn btn-outline-light btn-square mr-2" href="#"><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-outline-light btn-square mr-2" href="#"><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-outline-light btn-square mr-2" href="#"><i
-                                        class="fab fa-linkedin-in"></i></a>
-                                <a class="btn btn-outline-light btn-square" href="#"><i
-                                        class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-5">
-                            <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Quick Links</h5>
-                            <div class="d-flex flex-column justify-content-start">
-                                <a class="text-white mb-2" href="index.html"><i
-                                        class="fa fa-angle-right mr-2"></i>Home</a>
-                                <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About
-                                </a>
-                                <a class="text-white mb-2" href="services.html"><i
-                                        class="fa fa-angle-right mr-2"></i>Services</a>
-                                <a class="text-white mb-2" href="contact.html"><i
-                                        class="fa fa-angle-right mr-2"></i>Contact</a>
-                                <a class="text-white" href="gallery.html"><i
-                                        class="fa fa-angle-right mr-2"></i>Gallery</a>
-                            </div>
-                        </div>
+                <div class="col-lg-7">
+                    <div class="text-left mb-4">
+                        <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">About Us</h5>
+                        <h1>Smart service private limited is an integrated sport infra structure company.</h1>
                     </div>
-                </div>
-                <div class="col-lg-5 col-md-12 mb-5">
-                    <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Smart Services</h5>
-                    <p>Smart service private limited is an integrated sport infra structure company.Smart services made
-                        a gallant entry onto Jammu and Kashmir sports infrastructure since 2 decades and was in
-                        corporated with ministry of corporate affairs in 2024 under title Greenend smart services
-                        private limited.
-                        Our diverse nature and affiliation with worlds best sports field products allow us to provide
-                        our clients world class services tailored to meet their individual requirements.
+                    <p>Smart services was formed before two decades in reponce to various demands by clients and
+                        public for the need to have well developed sports facility in Jammu and Kashmir. In order to
+                        meet the demands of these individuals we have spent past few years researching on various
+                        world class approaches and methods that can best suit their needs.
                     </p>
-                    <!-- <div class="w-100">
+                    <a href="about.html" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn
+                        More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-7 col-md-12">
+                <div class="row">
+                    <div class="col-md-6 mb-5">
+                        <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker-alt mr-2"></i>Khaliq complex solina bazaar near petrol
+                            pump,Srinagar-190008, J&K</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+91 9797999431</p>
+                        <p><i class="fa fa-envelope mr-2"></i>smartservices.jk@gmail.com</p>
+                        <div class="d-flex justify-content-start mt-4">
+                            <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-square mr-2" href="#"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-square mr-2" href="#"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Quick Links</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About
+                            </a>
+                            <a class="text-white mb-2" href="services.html"><i
+                                    class="fa fa-angle-right mr-2"></i>Services</a>
+                            <a class="text-white mb-2" href="contact.html"><i
+                                    class="fa fa-angle-right mr-2"></i>Contact</a>
+                            <a class="text-white" href="gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12 mb-5">
+                <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Smart Services</h5>
+                <p>Smart service private limited is an integrated sport infra structure company.Smart services made
+                    a gallant entry onto Jammu and Kashmir sports infrastructure since 2 decades and was in
+                    corporated with ministry of corporate affairs in 2024 under title Greenend smart services
+                    private limited.
+                    Our diverse nature and affiliation with worlds best sports field products allow us to provide
+                    our clients world class services tailored to meet their individual requirements.
+                </p>
+                <!-- <div class="w-100">
                         <div class="input-group">
                             <input type="text" class="form-control border-light" style="padding: 30px;"
                                 placeholder="Your Email Address">
@@ -224,129 +308,129 @@
                             </div>
                         </div>
                     </div> -->
-                </div>
             </div>
         </div>
-        <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5"
-            style="border-color: rgba(256, 256, 256, .1) !important;">
-            <div class="row">
-                <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                    <p class="m-0 text-white">&copy; <a href="#">Smart Services</a>. All Rights Reserved. Designed by <a
-                            href="#">Smart Services Pvt Ltd</a>
-                    </p>
-                </div>
-                <div class="col-lg-6 text-center text-md-right">
-                    <ul class="nav d-inline-flex">
-                        <li class="nav-item">
-                            <a class="nav-link text-white py-0" href="#" data-toggle="modal"
-                                data-target="#privacyPolicyModal">Privacy</a>
-                        </li>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5"
+        style="border-color: rgba(256, 256, 256, .1) !important;">
+        <div class="row">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">&copy; <a href="#">Smart Services</a>. All Rights Reserved. Designed by <a
+                        href="#">Smart Services Pvt Ltd</a>
+                </p>
+            </div>
+            <div class="col-lg-6 text-center text-md-right">
+                <ul class="nav d-inline-flex">
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#" data-toggle="modal"
+                            data-target="#privacyPolicyModal">Privacy</a>
+                    </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link text-white py-0" href="faqs.html">FAQs</a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="faqs.html">FAQs</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div class="floating-icon">
+        <a href="https://api.whatsapp.com/send?phone=919797999431">
+            <img src="/img/whatsapp.png" alt="Floating Icon">
+        </a>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <!-- The Modal -->
+    <div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="privacyPolicyModalLabel">Privacy Policy - Greenend Smart Services
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Modal Body -->
+                <div class="modal-body">
+
+                    <p>Effective Date: October 25, 2024
+
+                        At Greened Smart Services, accessible from www.greenendsmartservices.com, protecting your
+                        privacy is a
+                        top priority. This Privacy Policy document outlines the types of information collected and
+                        recorded by Greened Smart Services and how we use it.</p>
+
+                    <h6>1. Information Collection and Use</h6>
+                    <p>Personal Data: When you visit our website, we may ask for personal information, such as your
+                        name, email address, contact number, and address, which you voluntarily provide when filling
+                        out forms or subscribing to newsletters.
+
+                        Usage Data: We may collect information on how the website is accessed and used, including
+                        but not limited to your device’s Internet Protocol (IP) address, browser type, browser
+                        version, pages you visit, and other diagnostic data.</p>
+
+                    <h6>How We Use Your Information</h6>
+                    <p>Greened Smart Services uses the collected data for various purposes:
+                    <ul>
+                        <li> To provide and maintain our website</li>
+                        <li> To notify you of updates or changes to our service</li>
+                        <li> To allow you to participate in interactive features of our website</li>
+                        <li> To provide customer support</li>
+                        <li> To gather analysis for improving our website</li>
+                        <li> To monitor usage and prevent security issues</li>
+                        <li> To detect, prevent, and address technical issues</li>
 
                     </ul>
+                    </p>
+
+                    <h6>Sharing of Information</h6>
+                    <p>We do not sell, trade, or otherwise transfer your Personally Identifiable Information to
+                        outside parties. However, we may share information in the following cases:
+
+                        With third-party service providers who assist us in operating our website
+                        To comply with legal obligations, protect and defend the rights or property of Greened Smart
+                        Services
+                        In connection with a merger, acquisition, or asset sale, where your personal data may be
+                        transferred</p>
+
+                    <h6>Security of Your Information</h6>
+                    <p>Greened Smart Services is committed to protecting your information. We use commercially
+                        acceptable methods to ensure your data’s security, although no method of transmission over
+                        the internet or electronic storage is 100% secure.</p>
+
+                    <h6>Changes to This Privacy Policy</h6>
+                    <p>We may update this privacy policy from time to time in order to reflect changes to our
+                        practices
+                        or for other operational, legal, or regulatory reasons.</p>
+
+
+                </div>
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <p style="color: #fd7e14;">© Greened Smart Services</p>
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
-        <div class="floating-icon">
-            <a href="https://api.whatsapp.com/send?phone=919797999431">
-                <img src="/img/whatsapp.png" alt="Floating Icon">
-            </a>
-        </div>
+    </div>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
 
-        <!-- The Modal -->
-        <div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="privacyPolicyModalLabel">Privacy Policy - Greenend Smart Services
-                        </h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <!-- Modal Body -->
-                    <div class="modal-body">
-
-                        <p>Effective Date: October 25, 2024
-
-                            At Greened Smart Services, accessible from www.greenendsmartservices.com, protecting your
-                            privacy is a
-                            top priority. This Privacy Policy document outlines the types of information collected and
-                            recorded by Greened Smart Services and how we use it.</p>
-
-                        <h6>1. Information Collection and Use</h6>
-                        <p>Personal Data: When you visit our website, we may ask for personal information, such as your
-                            name, email address, contact number, and address, which you voluntarily provide when filling
-                            out forms or subscribing to newsletters.
-
-                            Usage Data: We may collect information on how the website is accessed and used, including
-                            but not limited to your device’s Internet Protocol (IP) address, browser type, browser
-                            version, pages you visit, and other diagnostic data.</p>
-
-                        <h6>How We Use Your Information</h6>
-                        <p>Greened Smart Services uses the collected data for various purposes:
-                        <ul>
-                            <li> To provide and maintain our website</li>
-                            <li> To notify you of updates or changes to our service</li>
-                            <li> To allow you to participate in interactive features of our website</li>
-                            <li> To provide customer support</li>
-                            <li> To gather analysis for improving our website</li>
-                            <li> To monitor usage and prevent security issues</li>
-                            <li> To detect, prevent, and address technical issues</li>
-
-                        </ul>
-                        </p>
-
-                        <h6>Sharing of Information</h6>
-                        <p>We do not sell, trade, or otherwise transfer your Personally Identifiable Information to
-                            outside parties. However, we may share information in the following cases:
-
-                            With third-party service providers who assist us in operating our website
-                            To comply with legal obligations, protect and defend the rights or property of Greened Smart
-                            Services
-                            In connection with a merger, acquisition, or asset sale, where your personal data may be
-                            transferred</p>
-
-                        <h6>Security of Your Information</h6>
-                        <p>Greened Smart Services is committed to protecting your information. We use commercially
-                            acceptable methods to ensure your data’s security, although no method of transmission over
-                            the internet or electronic storage is 100% secure.</p>
-
-                        <h6>Changes to This Privacy Policy</h6>
-                        <p>We may update this privacy policy from time to time in order to reflect changes to our
-                            practices
-                            or for other operational, legal, or regulatory reasons.</p>
-
-
-                    </div>
-                    <!-- Modal Footer -->
-                    <div class="modal-footer">
-                        <p style="color: #fd7e14;">© Greened Smart Services</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-        <!-- Contact Javascript File -->
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
-
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
