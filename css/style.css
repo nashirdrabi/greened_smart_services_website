@@ -25,7 +25,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: font-family: "Nunito", sans-serif;
+  --font-family-sans-serif: font-family: "Faculty Glyphic", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -36,8 +36,8 @@
 }
 
 html {
-  font-family: "Nunito", sans-serif;
-  ;
+  font-family: "Faculty Glyphic", sans-serif;
+
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -58,7 +58,7 @@ section {
 
 body {
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Faculty Glyphic", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -4547,7 +4547,7 @@ input[type="button"].btn-block {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
+  color: black;
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
 }
@@ -11015,7 +11015,7 @@ h6,
 
 .navbar-light .navbar-nav .nav-link {
   padding: 20px 15px;
-  color: #44425A;
+  color: black;
   font-size: 18px;
   font-weight: 500;
   outline: none;
