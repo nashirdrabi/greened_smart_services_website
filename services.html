@@ -29,13 +29,27 @@
     <link href="css/style.css" rel="stylesheet">
     <style>
         .list-tile {
-            color: white;
-            background-color: black;
-            border: 4px solid #fd7e14;
+            color: black;
+            background-color: whitesmoke;
+
             border-radius: 8px;
             padding: 20px;
             overflow: auto;
-            margin-bottom: 10px;
+            margin-bottom: 50px;
+            transition: color 0.3s ease-in, background-color 0.3s ease-in, box-shadow 0.3s ease-in;
+            /* Smooth ease-in transition */
+        }
+
+        .list-tile:hover {
+            color: whitesmoke;
+
+            border: 1px solid #fd7e14;
+            background-color: black;
+
+            box-shadow: 0 12px 8px rgba(0, 0, 0, 0.2);
+
+            cursor: pointer;
+
         }
 
         .list-tile img {
@@ -48,12 +62,12 @@
 
         .list-tile h3 {
             color: #fd7e14;
-            font-weight: bold;
+            /* font-weight: bold; */
         }
 
-        .list-tile h4 {
+        .list-tile h5 {
             color: #fd7e14;
-            font-weight: bold;
+            /* font-weight: bold; */
             margin: 0;
         }
 
@@ -61,6 +75,64 @@
             padding: 8px;
             margin: 0;
             color: #666;
+        }
+
+        /* Styling for the dropdown */
+        .nav-item.dropdown {
+            position: relative;
+        }
+
+        .nav-link.dropdown-toggle {
+            cursor: pointer;
+        }
+
+        .dropdown-menu {
+
+            /* Hidden by default */
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            z-index: 1000;
+            min-width: 500px;
+            border-radius: 5px;
+            display: flex;
+            display: none;
+            /* Flexbox for two columns */
+            gap: 15px;
+        }
+
+        .dropdown-column {
+            display: flex;
+            width: 50%;
+            flex-direction: column;
+        }
+
+        .dropdown-item {
+            padding: 8px 12px;
+            color: #333;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f0f0f0;
+            color: #000;
+        }
+
+        /* Show dropdown on hover */
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: flex;
+        }
+
+        /* Media query for desktop view */
+        @media (max-width: 768px) {
+            .dropdown {
+                display: none;
+                /* Hide dropdown on mobile */
+            }
         }
     </style>
 </head>
@@ -125,7 +197,32 @@
                             <div class="navbar-nav py-0">
                                 <a href="index.html" class="nav-item nav-link">Home</a>
                                 <a href="about.html" class="nav-item nav-link">About</a>
-                                <a href="services.html" class="nav-item nav-link active">Services</a>
+
+                                <div class="nav-item dropdown">
+                                    <a href="services.html" class="nav-link dropdown-toggle"
+                                        id="servicesDropdown">Services</a>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-column">
+                                            <a href="#football" class="dropdown-item">Football</a>
+                                            <a href="#hockey" class="dropdown-item">Hockey</a>
+                                            <a href="#futsal" class="dropdown-item">Futsal</a>
+                                            <a href="#tennis" class="dropdown-item">Tennis</a>
+                                            <a href="#badminton" class="dropdown-item">Badminton</a>
+                                            <a href="#volleyball" class="dropdown-item">Volleyball</a>
+
+                                        </div>
+                                        <div class="dropdown-column">
+                                            <a href="#cricket" class="dropdown-item">Cricket</a>
+                                            <a href="#basketball" class="dropdown-item">Basketball</a>
+                                            <a href="#pickleball" class="dropdown-item">Pickle-ball</a>
+                                            <a href="#snooker" class="dropdown-item">Snooker and Billiards</a>
+                                            <a href="#swimming" class="dropdown-item">Swimming Pool</a>
+                                            <a href="#gym" class="dropdown-item">Gym Yoga & other fitness</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                                 <a href="faqs.html" class="nav-item nav-link">FAQS</a>
                                 <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -167,19 +264,18 @@
                 </div>
                 <div class="container-fluid mt-5">
                     <!-- List Tile Example -->
-                    <div class="list-tile d-flex align-items-start">
+                    <div class="list-tile d-flex align-items-start" id="football">
 
                         <div class="me-3">
-                            <div class="col--lg-3 col-sm-2 col-md-1">
-                                <img src="https://s3.ap-southeast-1.amazonaws.com/images.asianage.com/images/aa-Cover-sa8vbafejks4amh8rb09d3bna6-20190619162347.Medi.jpeg"
-                                    alt="Image">
+                            <div class="col-lg-3 col-s-0=m-10 col-md-1">
+                                <img src="https://media.www.kent.ac.uk/se/32772/VideoStill_1920w.jpg" alt="Image">
                             </div>
                         </div>
                         <div class="col-lg-8 col-sm-10 col-md-11">
                             <div>
-                                <h3>Football: </h3>
+                                <h3>Football</h3>
                                 <p>
-                                <h4> Synthetic Turf</h4>
+                                <h5> Synthetic Turf</h5>
                                 The world-class synthetic turf has been finely crafted and engineered specifically to
                                 meet or
                                 exceed the FIFA Quality Pro and FIFA Quality standards. Our products have been used for
@@ -188,7 +284,7 @@
                                 matches, Champions League matches, Super Bowl, to name a few.
                                 <br>
                                 <br>
-                                <h4> Hybrid Turf</h4>
+                                <h5> Hybrid Turf</h5>
 
                                 Hybrid grass systems combines the playing qualities of a natural grass surface with the
                                 durability of artificial turf. The water-retaining fiber technology gives 100%
@@ -202,282 +298,270 @@
                             </div>
                         </div>
                     </div>
-                    <div class="list-tile d-flex align-items-start">
+                    <div class="list-tile d-flex align-items-start" id="hockey">
 
                         <div class="me-3">
-                            <div class="col--lg-3 col-sm-2 col-md-1">
-                                <img src="https://s3.ap-southeast-1.amazonaws.com/images.asianage.com/images/aa-Cover-sa8vbafejks4amh8rb09d3bna6-20190619162347.Medi.jpeg"
+                            <div class="col-lg-3 col-sm-2 col-md-1">
+                                <img src="https://greaterkashmir.imagibyte.sortdcdn.net/wp-content/uploads/2023/08/tur.jpg"
                                     alt="Image">
                             </div>
                         </div>
                         <div class="col-lg-8 col-sm-10 col-md-11">
                             <div>
-                                <h3>Football: </h3>
+                                <h3>Hockey</h3>
                                 <p>
-                                <h4> Synthetic Turf</h4>
-                                The world-class synthetic turf has been finely crafted and engineered specifically to
-                                meet or
-                                exceed the FIFA Quality Pro and FIFA Quality standards. Our products have been used for
-                                international /National tournaments such as FIFA Women’s World Cup and Men’s
-                                international
-                                matches, Champions League matches, Super Bowl, to name a few.
+                                <h5> Synthetic Turf</h5>
+                                Our hockey fields develop fast pitches, true ball roll, increased player safety, and
+                                comfort resulting in skillful games, thus making it the most preferred choice. The
+                                surface offers player-friendly advancements to the game, enabling players to showcase
+                                their skills and strengths. Hockey players enjoy the comfortable cushioning and do not
+                                worry about severe injuries from gliding on our fields.
                                 <br>
                                 <br>
-                                <h4> Hybrid Turf</h4>
 
-                                Hybrid grass systems combines the playing qualities of a natural grass surface with the
-                                durability of artificial turf. The water-retaining fiber technology gives 100%
-                                true-to-nature
-                                playing experience. It helps in optimal shock absorption and is uniform over the whole
-                                pitch.
-                                Regardless of the weather, the Tarkett hybrid turf system provides an all-weather
-                                playability
-                                condition all year round.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-tile d-flex align-items-start" id="futsal">
+
+                        <div class="me-3">
+                            <div class="col-lg-3 col-sm-2 col-md-1">
+                                <img src="https://i0.wp.com/asianmail.in/wp-content/uploads/2021/09/IMG-20210923-WA0022.jpg?fit=696%2C522&ssl=1"
+                                    alt="Image">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-sm-10 col-md-11">
+                            <div>
+                                <h3>Futsal</h3>
+                                <p>
+                                <h5>Synthetic Turf</h5>
+                                The world-class synthetic turf looks and feels like natural grass and provides the
+                                safest playing conditions making it the most preferred surface. The turf has been finely
+                                crafted and engineered specifically to meet or exceed the highest industry standards
+                                such as the FIFA Quality Pro and FIFA Quality.
+                                <br>
+                                <br>
+                                <h5>Interlocking Modular Surface</h5>
+
+                                no data
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="list-tile d-flex align-items-start">
+                    <div class="list-tile d-flex align-items-start" id="tennis">
 
                         <div class="me-3">
-                            <div class="col--lg-3 col-sm-2 col-md-1">
-                                <img src="https://s3.ap-southeast-1.amazonaws.com/images.asianage.com/images/aa-Cover-sa8vbafejks4amh8rb09d3bna6-20190619162347.Medi.jpeg"
+                            <div class="col-lg-3 col-sm-2 col-md-1">
+                                <img src="https://kashmirobserver.net/wp-content/uploads/2021/09/Srinagar-Open-Tennis-Championship-2021.jpg.webp"
                                     alt="Image">
                             </div>
                         </div>
                         <div class="col-lg-8 col-sm-10 col-md-11">
                             <div>
-                                <h3>Football: </h3>
-                                <p>
-                                <h4> Synthetic Turf</h4>
-                                The world-class synthetic turf has been finely crafted and engineered specifically to
-                                meet or
-                                exceed the FIFA Quality Pro and FIFA Quality standards. Our products have been used for
-                                international /National tournaments such as FIFA Women’s World Cup and Men’s
-                                international
-                                matches, Champions League matches, Super Bowl, to name a few.
-                                <br>
-                                <br>
-                                <h4> Hybrid Turf</h4>
+                                <h3>Tennis</h3>
 
-                                Hybrid grass systems combines the playing qualities of a natural grass surface with the
-                                durability of artificial turf. The water-retaining fiber technology gives 100%
-                                true-to-nature
-                                playing experience. It helps in optimal shock absorption and is uniform over the whole
-                                pitch.
-                                Regardless of the weather, the Tarkett hybrid turf system provides an all-weather
-                                playability
-                                condition all year round.
+                                ITF Approved, surfaces are suitable for all levels of competition. Not only is the
+                                range
+                                of surfaces long lasting, but these high-performing products for outdoor and indoor
+                                sports also cater to every budget and need. An added benefit of the product is that
+                                one
+                                can relocate the court anywhere and anytime with minimal charges.
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-tile d-flex align-items-start" id="badminton">
+
+                        <div class="me-3">
+                            <div class="col-lg-3 col-sm-2 col-md-1">
+                                <img src="https://i.pinimg.com/736x/38/93/b5/3893b5be59d1f4093f7fbf39c8804768.jpg"
+                                    alt="Image">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-sm-10 col-md-11">
+                            <div>
+                                <h3>Badminton</h3>
+                                <p>
+                                <h5>Interlocking modular surface </h5>
+                                These surfaces are an excellent option for both resurfacing existing courts and
+                                launching new projects. Our badminton courts are designed to be maintenance-free, making
+                                them an affordable solution for any budget. Built for versatility, these multi-sport and
+                                multi-functional surfaces provide outstanding traction, ensuring safe play whether
+                                conditions are wet or dry. Engineered for peak performance, they support athletes at
+                                every skill level, from beginners to professionals. Ideal for various settings,
+                                including schools, recreational centers, and sports facilities, these courts are crafted
+                                for durability and long-lasting use, promoting a safe, reliable, and enjoyable sports
+                                environment for everyone.
+                                <br>
+                                <br>
+                                <h5>Synthetic Turf</h5>
+                                no data
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="list-tile d-flex align-items-start">
+                    <div class="list-tile d-flex align-items-start" id="volleyball">
 
                         <div class="me-3">
-                            <div class="col--lg-3 col-sm-2 col-md-1">
-                                <img src="https://s3.ap-southeast-1.amazonaws.com/images.asianage.com/images/aa-Cover-sa8vbafejks4amh8rb09d3bna6-20190619162347.Medi.jpeg"
+                            <div class="col-lg-3 col-sm-2 col-md-1">
+                                <img src="https://5.imimg.com/data5/KE/KI/IJ/SELLER-475165/4-pro-volleyball-set-rwb-2-500x500.jpg"
                                     alt="Image">
                             </div>
                         </div>
                         <div class="col-lg-8 col-sm-10 col-md-11">
                             <div>
-                                <h3>Football: </h3>
+                                <h3>Volleyball </h3>
                                 <p>
-                                <h4> Synthetic Turf</h4>
-                                The world-class synthetic turf has been finely crafted and engineered specifically to
-                                meet or
-                                exceed the FIFA Quality Pro and FIFA Quality standards. Our products have been used for
-                                international /National tournaments such as FIFA Women’s World Cup and Men’s
-                                international
-                                matches, Champions League matches, Super Bowl, to name a few.
+                                <h5>Interlocking Modular Surface</h5>
+                                no data
                                 <br>
                                 <br>
-                                <h4> Hybrid Turf</h4>
-
-                                Hybrid grass systems combines the playing qualities of a natural grass surface with the
-                                durability of artificial turf. The water-retaining fiber technology gives 100%
-                                true-to-nature
-                                playing experience. It helps in optimal shock absorption and is uniform over the whole
-                                pitch.
-                                Regardless of the weather, the Tarkett hybrid turf system provides an all-weather
-                                playability
-                                condition all year round.
+                                <h5>Synthetic Turf</h5>
+                                no data
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="list-tile d-flex align-items-start">
+                    <div class="list-tile d-flex align-items-start" id="cricket">
 
                         <div class="me-3">
-                            <div class="col--lg-3 col-sm-2 col-md-1">
-                                <img src="https://s3.ap-southeast-1.amazonaws.com/images.asianage.com/images/aa-Cover-sa8vbafejks4amh8rb09d3bna6-20190619162347.Medi.jpeg"
+                            <div class="col-lg-3 col-sm-2 col-md-1">
+                                <img src="https://5.imimg.com/data5/SELLER/Default/2022/8/DP/EP/RG/121846522/cricket-turf-500x500.jpg"
                                     alt="Image">
                             </div>
                         </div>
                         <div class="col-lg-8 col-sm-10 col-md-11">
                             <div>
-                                <h3>Football: </h3>
+                                <h3>Cricket</h3>
                                 <p>
-                                <h4> Synthetic Turf</h4>
-                                The world-class synthetic turf has been finely crafted and engineered specifically to
-                                meet or
-                                exceed the FIFA Quality Pro and FIFA Quality standards. Our products have been used for
-                                international /National tournaments such as FIFA Women’s World Cup and Men’s
-                                international
-                                matches, Champions League matches, Super Bowl, to name a few.
-                                <br>
-                                <br>
-                                <h4> Hybrid Turf</h4>
 
-                                Hybrid grass systems combines the playing qualities of a natural grass surface with the
-                                durability of artificial turf. The water-retaining fiber technology gives 100%
-                                true-to-nature
-                                playing experience. It helps in optimal shock absorption and is uniform over the whole
-                                pitch.
-                                Regardless of the weather, the Tarkett hybrid turf system provides an all-weather
-                                playability
-                                condition all year round.
+                                <ul>
+                                    <li>Synthetic Turf Surface</li>
+                                    <li>Net</li>
+                                    <li>Cage</li>
+                                    <li>Practice Pitch</li>
+                                    <li>Competition Pitch</li>
+                                    <li>Bowling Machine</li>
+                                </ul>
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="list-tile d-flex align-items-start">
+                    <div class="list-tile d-flex align-items-start" id="basketball">
 
                         <div class="me-3">
-                            <div class="col--lg-3 col-sm-2 col-md-1">
-                                <img src="https://s3.ap-southeast-1.amazonaws.com/images.asianage.com/images/aa-Cover-sa8vbafejks4amh8rb09d3bna6-20190619162347.Medi.jpeg"
+                            <div class="col-lg-3 col-sm-2 col-md-1">
+                                <img src="https://5.imimg.com/data5/YY/HA/MY-54802123/synthetic-basketball-flooring-500x500.jpg"
                                     alt="Image">
                             </div>
                         </div>
                         <div class="col-lg-8 col-sm-10 col-md-11">
                             <div>
-                                <h3>Football: </h3>
+                                <h3>Basketball</h3>
                                 <p>
-                                <h4> Synthetic Turf</h4>
-                                The world-class synthetic turf has been finely crafted and engineered specifically to
-                                meet or
-                                exceed the FIFA Quality Pro and FIFA Quality standards. Our products have been used for
-                                international /National tournaments such as FIFA Women’s World Cup and Men’s
-                                international
-                                matches, Champions League matches, Super Bowl, to name a few.
-                                <br>
-                                <br>
-                                <h4> Hybrid Turf</h4>
+                                <h5>Interlocking moular surface</h5>
 
-                                Hybrid grass systems combines the playing qualities of a natural grass surface with the
-                                durability of artificial turf. The water-retaining fiber technology gives 100%
-                                true-to-nature
-                                playing experience. It helps in optimal shock absorption and is uniform over the whole
-                                pitch.
-                                Regardless of the weather, the Tarkett hybrid turf system provides an all-weather
-                                playability
-                                condition all year round.
+                                <br>
+                                <br>
+                                <h5>Synthetic Turf</h5>
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="list-tile d-flex align-items-start">
+                    <div class="list-tile d-flex align-items-start" id="pickleball">
 
                         <div class="me-3">
-                            <div class="col--lg-3 col-sm-2 col-md-1">
-                                <img src="https://s3.ap-southeast-1.amazonaws.com/images.asianage.com/images/aa-Cover-sa8vbafejks4amh8rb09d3bna6-20190619162347.Medi.jpeg"
+                            <div class="col-lg-3 col-sm-2 col-md-1">
+                                <img src="https://picklevine.com/wp-content/uploads/2022/09/Can-Pickleball-Be-09172022.jpg.webp"
                                     alt="Image">
                             </div>
                         </div>
                         <div class="col-lg-8 col-sm-10 col-md-11">
                             <div>
-                                <h3>Football: </h3>
+                                <h3>Pickle-ball</h3>
                                 <p>
-                                <h4> Synthetic Turf</h4>
-                                The world-class synthetic turf has been finely crafted and engineered specifically to
-                                meet or
-                                exceed the FIFA Quality Pro and FIFA Quality standards. Our products have been used for
-                                international /National tournaments such as FIFA Women’s World Cup and Men’s
-                                international
-                                matches, Champions League matches, Super Bowl, to name a few.
-                                <br>
-                                <br>
-                                <h4> Hybrid Turf</h4>
+                                <h5>Interlocking Modular Surface</h5>
 
-                                Hybrid grass systems combines the playing qualities of a natural grass surface with the
-                                durability of artificial turf. The water-retaining fiber technology gives 100%
-                                true-to-nature
-                                playing experience. It helps in optimal shock absorption and is uniform over the whole
-                                pitch.
-                                Regardless of the weather, the Tarkett hybrid turf system provides an all-weather
-                                playability
-                                condition all year round.
+                                <br>
+                                <br>
+
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="list-tile d-flex align-items-start">
+                    <div class="list-tile d-flex align-items-start" id="snooker">
 
                         <div class="me-3">
-                            <div class="col--lg-3 col-sm-2 col-md-1">
-                                <img src="https://s3.ap-southeast-1.amazonaws.com/images.asianage.com/images/aa-Cover-sa8vbafejks4amh8rb09d3bna6-20190619162347.Medi.jpeg"
+                            <div class="col-lg-3 col-sm-2 col-md-1">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Snooker_table_selby.JPG/1200px-Snooker_table_selby.JPG"
                                     alt="Image">
                             </div>
                         </div>
                         <div class="col-lg-8 col-sm-10 col-md-11">
                             <div>
-                                <h3>Football: </h3>
+                                <h3>Snooker and Billiards</h3>
                                 <p>
-                                <h4> Synthetic Turf</h4>
-                                The world-class synthetic turf has been finely crafted and engineered specifically to
-                                meet or
-                                exceed the FIFA Quality Pro and FIFA Quality standards. Our products have been used for
-                                international /National tournaments such as FIFA Women’s World Cup and Men’s
-                                international
-                                matches, Champions League matches, Super Bowl, to name a few.
-                                <br>
-                                <br>
-                                <h4> Hybrid Turf</h4>
+                                <ul>
+                                    <li>Snooker Table </li>
+                                    <li>Pool Tables</li>
+                                    <li>Billiards Table</li>
 
-                                Hybrid grass systems combines the playing qualities of a natural grass surface with the
-                                durability of artificial turf. The water-retaining fiber technology gives 100%
-                                true-to-nature
-                                playing experience. It helps in optimal shock absorption and is uniform over the whole
-                                pitch.
-                                Regardless of the weather, the Tarkett hybrid turf system provides an all-weather
-                                playability
-                                condition all year round.
+                                </ul>
+
+                                <br>
+                                <br>
+
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="list-tile d-flex align-items-start">
+                    <div class="list-tile d-flex align-items-start" id="swimming">
 
                         <div class="me-3">
-                            <div class="col--lg-3 col-sm-2 col-md-1">
-                                <img src="https://s3.ap-southeast-1.amazonaws.com/images.asianage.com/images/aa-Cover-sa8vbafejks4amh8rb09d3bna6-20190619162347.Medi.jpeg"
+                            <div class="col-lg-3 col-sm-2 col-md-1">
+                                <img src="https://5.imimg.com/data5/SELLER/Default/2024/2/383004835/KY/PO/DE/1938594/outdoor-swimming-pool.jpeg"
                                     alt="Image">
                             </div>
                         </div>
                         <div class="col-lg-8 col-sm-10 col-md-11">
                             <div>
-                                <h3>Football: </h3>
-                                <p>
-                                <h4> Synthetic Turf</h4>
-                                The world-class synthetic turf has been finely crafted and engineered specifically to
-                                meet or
-                                exceed the FIFA Quality Pro and FIFA Quality standards. Our products have been used for
-                                international /National tournaments such as FIFA Women’s World Cup and Men’s
-                                international
-                                matches, Champions League matches, Super Bowl, to name a few.
-                                <br>
-                                <br>
-                                <h4> Hybrid Turf</h4>
 
-                                Hybrid grass systems combines the playing qualities of a natural grass surface with the
-                                durability of artificial turf. The water-retaining fiber technology gives 100%
-                                true-to-nature
-                                playing experience. It helps in optimal shock absorption and is uniform over the whole
-                                pitch.
-                                Regardless of the weather, the Tarkett hybrid turf system provides an all-weather
-                                playability
-                                condition all year round.
+                                <p>
+                                <h3>Swimming Pool</h3>
+                                <ul>
+                                    <li>Budget Friendly pool surfaces </li>
+                                    <li>Electronically inflated pools etc</li>
+                                </ul>
+
+
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-tile d-flex align-items-start" id="gym">
+
+                        <div class="me-3">
+                            <div class="col-lg-3 col-sm-2 col-md-1">
+                                <img src="https://plus.unsplash.com/premium_photo-1661301057249-bd008eebd06a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z3ltfGVufDB8fDB8fHww"
+                                    alt="Image">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-sm-10 col-md-11">
+                            <div>
+                                <h3>Gym, Yoga and other fitness Solutions</h3>
+                                <p>
+                                <ul>
+                                    <li>Gym Equipment’s</li>
+                                    <li> Yoga Mats </li>
+                                    <li> Treadmills
+                                    </li>
+                                </ul>
+
+                                <br>
+                                <br>
+
                                 </p>
                             </div>
                         </div>
@@ -515,7 +599,8 @@
 
         </div>
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+        <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5"
+            style="margin-top: 90px;background-color: black !important;">
             <div class="row pt-5">
                 <div class="col-lg-7 col-md-12">
                     <div class="row">
@@ -530,7 +615,7 @@
                                 <a class="btn btn-outline-light btn-square mr-2"
                                     href="https://www.facebook.com/share/oEAxTYkFaDvSjcq8/"><i
                                         class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-outline-light btn-square"
+                                <a class="btn btn-outline-light btn-square mr-2"
                                     href="https://www.instagram.com/smartservice125/"><i
                                         class="fab fa-instagram"></i></a>
                                 <a class="btn btn-outline-light btn-square mr-2"
@@ -579,7 +664,7 @@
             </div>
         </div>
         <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5"
-            style="border-color: rgba(256, 256, 256, .1) !important;">
+            style="border-color: rgba(256, 256, 256, .1) !important;background-color: black !important;">
             <div class="row">
                 <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
                     <p class="m-0 text-white">&copy; <a href="#">2024 Smart Services Pvt Ltd</a> All Rights Reserved.
