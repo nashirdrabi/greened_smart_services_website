@@ -53,11 +53,11 @@
         }
 
         .list-tile img {
-            width: 350px;
+            width: 350px !important;
             height: 350px;
             padding: 20px;
             object-fit: cover;
-            border-radius: 10%;
+            border-radius: 10% !important;
         }
 
         .list-tile h3 {
@@ -127,11 +127,20 @@
             display: flex;
         }
 
-        /* Media query for desktop view */
+        /* Media query for mobile view */
         @media (max-width: 768px) {
+
             .dropdown {
                 display: none;
                 /* Hide dropdown on mobile */
+            }
+
+            .list-tile img {
+                width: 100%;
+                height: 220px;
+                padding: 20px;
+                object-fit: cover;
+                border-radius: 10% !important;
             }
         }
     </style>
@@ -264,49 +273,44 @@
                 </div>
                 <div class="container-fluid mt-5">
                     <!-- List Tile Example -->
-                    <div class="list-tile d-flex align-items-start" id="football">
-
+                    <div class="list-tile d-flex flex-column flex-md-row align-items-start mb-4" id="football">
+                        <!-- Image Section -->
                         <div class="me-3">
-                            <div class="col-lg-3 col-s-0=m-10 col-md-1">
+                            <div class="me-md-3 mb-3 mb-md-0 col-md-4 col-lg-3">
                                 <img src="https://media.www.kent.ac.uk/se/32772/VideoStill_1920w.jpg" alt="Image">
+
                             </div>
                         </div>
-                        <div class="col-lg-8 col-sm-10 col-md-11">
-                            <div>
-                                <h3>Football</h3>
-                                <p>
-                                <h5> Synthetic Turf</h5>
-                                The world-class synthetic turf has been finely crafted and engineered specifically to
-                                meet or
-                                exceed the FIFA Quality Pro and FIFA Quality standards. Our products have been used for
-                                international /National tournaments such as FIFA Women’s World Cup and Men’s
-                                international
-                                matches, Champions League matches, Super Bowl, to name a few.
-                                <br>
-                                <br>
-                                <h5> Hybrid Turf</h5>
 
-                                Hybrid grass systems combines the playing qualities of a natural grass surface with the
-                                durability of artificial turf. The water-retaining fiber technology gives 100%
-                                true-to-nature
-                                playing experience. It helps in optimal shock absorption and is uniform over the whole
-                                pitch.
-                                Regardless of the weather, the Tarkett hybrid turf system provides an all-weather
-                                playability
-                                condition all year round.
-                                </p>
-                            </div>
+                        <!-- Text Section -->
+                        <div>
+                            <h3>Football</h3>
+                            <p>
+                            <h5>Synthetic Turf</h5>
+                            The world-class synthetic turf has been finely crafted and engineered specifically to meet
+                            or exceed the FIFA Quality Pro and FIFA Quality standards. Our products have been used for
+                            international /National tournaments such as FIFA Women’s World Cup and Men’s international
+                            matches, Champions League matches, Super Bowl, to name a few.
+                            <br><br>
+                            <h5>Hybrid Turf</h5>
+                            Hybrid grass systems combine the playing qualities of a natural grass surface with the
+                            durability of artificial turf. The water-retaining fiber technology gives a 100%
+                            true-to-nature playing experience. It helps in optimal shock absorption and is uniform over
+                            the whole pitch. Regardless of the weather, the Tarkett hybrid turf system provides an
+                            all-weather playability condition all year round.
+                            </p>
                         </div>
                     </div>
-                    <div class="list-tile d-flex align-items-start" id="hockey">
+
+                    <div class="list-tile d-flex flex-column flex-md-row align-items-start mb-4" id=" hockey">
 
                         <div class="me-3">
-                            <div class="col-lg-3 col-sm-2 col-md-1">
+                            <div class="me-md-3 mb-3 mb-md-0 col-md-4 col-lg-3">
                                 <img src="https://greaterkashmir.imagibyte.sortdcdn.net/wp-content/uploads/2023/08/tur.jpg"
                                     alt="Image">
                             </div>
                         </div>
-                        <div class="col-lg-8 col-sm-10 col-md-11">
+                        <div class="col-md-8 col-lg-9">
                             <div>
                                 <h3>Hockey</h3>
                                 <p>
@@ -322,15 +326,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="list-tile d-flex align-items-start" id="futsal">
+                    <div class="list-tile d-flex flex-column flex-md-row align-items-start mb-4" id="futsal">
 
                         <div class="me-3">
-                            <div class="col-lg-3 col-sm-2 col-md-1">
+                            <div class="me-md-3 mb-3 mb-md-0 col-md-4 col-lg-3">
                                 <img src="https://i0.wp.com/asianmail.in/wp-content/uploads/2021/09/IMG-20210923-WA0022.jpg?fit=696%2C522&ssl=1"
                                     alt="Image">
                             </div>
                         </div>
-                        <div class="col-lg-8 col-sm-10 col-md-11">
+                        <div class="col-md-8 col-lg-9">
                             <div>
                                 <h3>Futsal</h3>
                                 <p>
@@ -348,16 +352,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="list-tile d-flex align-items-start" id="tennis">
+                    <div class="list-tile d-flex flex-column flex-md-row align-items-start mb-4" id="tennis">
 
                         <div class="me-3">
-                            <div class="col-lg-3 col-sm-2 col-md-1">
+                            <div class="me-md-3 mb-3 mb-md-0 col-md-4 col-lg-3">
                                 <img src="https://kashmirobserver.net/wp-content/uploads/2021/09/Srinagar-Open-Tennis-Championship-2021.jpg.webp"
                                     alt="Image">
                             </div>
                         </div>
-                        <div class="col-lg-8 col-sm-10 col-md-11">
+                        <div class="col-md-8 col-lg-9">
                             <div>
+
                                 <h3>Tennis</h3>
 
                                 ITF Approved, surfaces are suitable for all levels of competition. Not only is the
@@ -371,15 +376,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="list-tile d-flex align-items-start" id="badminton">
+                    <div class="list-tile d-flex flex-column flex-md-row align-items-start mb-4" id="badminton">
 
                         <div class="me-3">
-                            <div class="col-lg-3 col-sm-2 col-md-1">
+                            <div class="me-md-3 mb-3 mb-md-0 col-md-4 col-lg-3">
                                 <img src="https://i.pinimg.com/736x/38/93/b5/3893b5be59d1f4093f7fbf39c8804768.jpg"
                                     alt="Image">
                             </div>
                         </div>
-                        <div class="col-lg-8 col-sm-10 col-md-11">
+                        <div class="col-md-8 col-lg-9">
                             <div>
                                 <h3>Badminton</h3>
                                 <p>
@@ -401,15 +406,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="list-tile d-flex align-items-start" id="volleyball">
+                    <div class="list-tile d-flex flex-column flex-md-row align-items-start mb-4" id="volleyball">
 
                         <div class="me-3">
-                            <div class="col-lg-3 col-sm-2 col-md-1">
+                            <div class="me-md-3 mb-3 mb-md-0 col-md-4 col-lg-3">
                                 <img src="https://5.imimg.com/data5/KE/KI/IJ/SELLER-475165/4-pro-volleyball-set-rwb-2-500x500.jpg"
                                     alt="Image">
                             </div>
                         </div>
-                        <div class="col-lg-8 col-sm-10 col-md-11">
+                        <div class="col-md-8 col-lg-9">
                             <div>
                                 <h3>Volleyball </h3>
                                 <p>
@@ -423,15 +428,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="list-tile d-flex align-items-start" id="cricket">
+                    <div class="list-tile d-flex flex-column flex-md-row align-items-start mb-4" id="cricket">
 
                         <div class="me-3">
-                            <div class="col-lg-3 col-sm-2 col-md-1">
+                            <div class="me-md-3 mb-3 mb-md-0 col-md-4 col-lg-3">
                                 <img src="https://5.imimg.com/data5/SELLER/Default/2022/8/DP/EP/RG/121846522/cricket-turf-500x500.jpg"
                                     alt="Image">
                             </div>
                         </div>
-                        <div class="col-lg-8 col-sm-10 col-md-11">
+                        <div class="col-md-8 col-lg-9">
                             <div>
                                 <h3>Cricket</h3>
                                 <p>
@@ -448,15 +453,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="list-tile d-flex align-items-start" id="basketball">
+                    <div class="list-tile d-flex flex-column flex-md-row align-items-start mb-4" id="basketball">
 
                         <div class="me-3">
-                            <div class="col-lg-3 col-sm-2 col-md-1">
+                            <div class="me-md-3 mb-3 mb-md-0 col-md-4 col-lg-3">
                                 <img src="https://5.imimg.com/data5/YY/HA/MY-54802123/synthetic-basketball-flooring-500x500.jpg"
                                     alt="Image">
                             </div>
                         </div>
-                        <div class="col-lg-8 col-sm-10 col-md-11">
+                        <div class="col-md-8 col-lg-9">
                             <div>
                                 <h3>Basketball</h3>
                                 <p>
@@ -469,15 +474,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="list-tile d-flex align-items-start" id="pickleball">
+                    <div class="list-tile d-flex flex-column flex-md-row align-items-start mb-4" id="pickleball">
 
                         <div class="me-3">
-                            <div class="col-lg-3 col-sm-2 col-md-1">
+                            <div class="me-md-3 mb-3 mb-md-0 col-md-4 col-lg-3">
                                 <img src="https://picklevine.com/wp-content/uploads/2022/09/Can-Pickleball-Be-09172022.jpg.webp"
                                     alt="Image">
                             </div>
                         </div>
-                        <div class="col-lg-8 col-sm-10 col-md-11">
+                        <div class="col-md-8 col-lg-9">
                             <div>
                                 <h3>Pickle-ball</h3>
                                 <p>
@@ -490,15 +495,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="list-tile d-flex align-items-start" id="snooker">
+                    <div class="list-tile d-flex flex-column flex-md-row align-items-start mb-4" id="snooker">
 
                         <div class="me-3">
-                            <div class="col-lg-3 col-sm-2 col-md-1">
+                            <div class="me-md-3 mb-3 mb-md-0 col-md-4 col-lg-3">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Snooker_table_selby.JPG/1200px-Snooker_table_selby.JPG"
                                     alt="Image">
                             </div>
                         </div>
-                        <div class="col-lg-8 col-sm-10 col-md-11">
+                        <div class="col-md-8 col-lg-9">
                             <div>
                                 <h3>Snooker and Billiards</h3>
                                 <p>
@@ -516,15 +521,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="list-tile d-flex align-items-start" id="swimming">
+                    <div class="list-tile d-flex flex-column flex-md-row align-items-start mb-4" id="swimming">
 
                         <div class="me-3">
-                            <div class="col-lg-3 col-sm-2 col-md-1">
+                            <div class="me-md-3 mb-3 mb-md-0 col-md-4 col-lg-3">
                                 <img src="https://5.imimg.com/data5/SELLER/Default/2024/2/383004835/KY/PO/DE/1938594/outdoor-swimming-pool.jpeg"
                                     alt="Image">
                             </div>
                         </div>
-                        <div class="col-lg-8 col-sm-10 col-md-11">
+                        <div class="col-md-8 col-lg-9">
                             <div>
 
                                 <p>
@@ -540,15 +545,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="list-tile d-flex align-items-start" id="gym">
+                    <div class="list-tile d-flex flex-column flex-md-row align-items-start mb-4" id="gym">
 
                         <div class="me-3">
-                            <div class="col-lg-3 col-sm-2 col-md-1">
+                            <div class="me-md-3 mb-3 mb-md-0 col-md-4 col-lg-3">
                                 <img src="https://plus.unsplash.com/premium_photo-1661301057249-bd008eebd06a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z3ltfGVufDB8fDB8fHww"
                                     alt="Image">
                             </div>
                         </div>
-                        <div class="col-lg-8 col-sm-10 col-md-11">
+                        <div class="col-md-8 col-lg-9">
                             <div>
                                 <h3>Gym, Yoga and other fitness Solutions</h3>
                                 <p>
@@ -570,7 +575,7 @@
                 </div>
             </div>
         </div>
-        <div class="jumbotron h5">
+        <div class="jumbotron">
             <p>Sports has long been established as the foundation forward looking
                 society. It pre-occupies the idle mind thus reducing crime and liabilities on the
                 society. While at the same time helping to discover talents and successful
